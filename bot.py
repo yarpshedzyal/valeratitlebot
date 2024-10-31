@@ -29,7 +29,7 @@ async def handle_document(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
         for index, link in enumerate(df['links']):
             title = scrape_title(link)
             titles.append(title)
-            time.sleep(3)
+            # time.sleep(3)
             # Pause every 20 links
             if (index + 1) % 20 == 0:
                 await update.message.reply_text(f"Processed {index + 1} links. Taking a 30-second break...")
